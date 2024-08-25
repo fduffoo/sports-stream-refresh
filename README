@@ -1,0 +1,60 @@
+# Auto Refresh and Interact with Stream
+
+## Description
+
+This Tampermonkey/Greasemonkey script automatically handles video streams on web pages by refreshing the page if the stream lags or buffers. The script also interacts with the page by clicking on the center of the screen to play the video, closing any ads that may appear, and then clicking play again if necessary.
+
+## Features
+
+- **Page Refresh**: Refreshes the page if the video stream appears to be lagging or buffering.
+- **Play Video**: Clicks the center of the screen to start or resume playback.
+- **Close Ads**: Attempts to close any ads that appear after starting the video.
+- **Resume Playback**: Clicks the play button again if needed after closing ads.
+
+## Installation
+
+1. **Install Tampermonkey or Greasemonkey**:
+   - [Tampermonkey](https://www.tampermonkey.net/)
+   - [Greasemonkey](https://www.greasespot.net/)
+
+2. **Add New Script**:
+   - Open Tampermonkey or Greasemonkey dashboard.
+   - Create a new script.
+
+3. **Copy and Paste Script**:
+   - Copy the content of `script.user.js` and paste it into the new script editor.
+   - Save and enable the script.
+
+4. **Adjust Selectors**:
+   - Update the script with the correct CSS selectors for the ad close button and play button. Use browser developer tools to inspect the page and find these elements.
+
+## Configuration
+
+- **@match**: Adjust the `@match` field in `script.user.js` to specify the exact URL or URL pattern where your sports stream is located.
+
+- **Selectors**: Modify the CSS selectors in the `interactWithStream()` function to match the elements on your specific streaming site.
+
+## Usage
+
+The script will automatically:
+
+1. Check the stream every 30 seconds.
+2. Refresh the page if buffering or lagging is detected.
+3. Click the center of the screen to play the video.
+4. Close any ads that appear and click play again if necessary.
+
+## Troubleshooting
+
+- **No Video Element Found**: Ensure that the video element selector is correct for the page. You may need to adjust the script based on the structure of the page.
+
+- **Ad Close Button Not Found**: Make sure the CSS selector for the ad close button matches the actual button on the page. Inspect the ad element to find the correct selector.
+
+- **Play Button Not Found**: Adjust the selector for the play button if the video does not resume as expected. Inspect the page to find the correct button element.
+
+## License
+
+This script is provided as-is. Use it at your own risk and ensure compliance with the terms of service of the websites you interact with.
+
+## Contact
+
+For issues or questions, feel free to open an issue on the [GitHub repository](#) or contact [your email](mailto:your-email@example.com).
